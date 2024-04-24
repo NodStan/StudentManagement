@@ -13,7 +13,7 @@ public class StudentRegisteredController {
     @FXML
     public TextField firstName, lastName, email, age, course;
 
-    public StudentRegisteredController() throws SQLException, ClassNotFoundException{
+    public StudentRegisteredController() throws SQLException, ClassNotFoundException {
     }
 
     @FXML
@@ -39,4 +39,4 @@ public class StudentRegisteredController {
         stage.show();
 //        stage.close();
     }
-}jh
+}
