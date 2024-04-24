@@ -38,5 +38,5 @@ public class StudentRegisteredController {
         stage.setScene(new Scene(tableView.load()));
         stage.show();
 //        stage.close();
-    }
+    }k
 }
