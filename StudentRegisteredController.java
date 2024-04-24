@@ -39,4 +39,4 @@ public class StudentRegisteredController {
         stage.show();
 //        stage.close();
     }
-}v
+}
