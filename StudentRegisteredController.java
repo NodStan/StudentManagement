@@ -1,9 +1,12 @@
 package com.example.studentmanagement;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.sql.SQLException;
 
 public class StudentRegisteredController {
@@ -14,7 +17,7 @@ public class StudentRegisteredController {
     }
 
     @FXML
-    protected void onSubmit() throws  SQLException, ClassNotFoundException{
+    protected void onSubmit() throws SQLException, ClassNotFoundException, IOException {
         String firstName = this.firstName.getText();
         String lastName = this.lastName.getText();
         String email = this.email.getText();
@@ -30,7 +33,10 @@ public class StudentRegisteredController {
         this.course.setText("");
         this.age.setText("");
 
+        FXMLLoader tableView = new FXMLLoader(this.getClass().getResource("studentTable.fxml"));
         Stage stage = (Stage) this.firstName.getScene().getWindow();
-        stage.close();
+        stage.setScene(new Scene(tableView.load()));
+        stage.show();
+//        stage.close();
     }
-}
+}c
