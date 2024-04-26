@@ -18,6 +18,7 @@ public class StudentTableController implements Initializable {
     ObservableList<StudentModel> studentsList;
     @Override
     public void initialize(URL location, ResourceBundle resources){
+
         try {
             StudentDao dao =new StudentDao();
             studentsList = FXCollections.observableList(dao.getAllStudent());
@@ -25,6 +26,9 @@ public class StudentTableController implements Initializable {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+//        } catch (ClassNotFoundException e){
+//            throw new RuntimeException(e);
+//        }
 
 // Creation of table columns
         TableColumn<StudentModel, String> firstNameColumn = new TableColumn<>();
