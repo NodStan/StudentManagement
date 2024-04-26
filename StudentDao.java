@@ -13,7 +13,7 @@ public class StudentDao {
     }
 
     public void saveStudent(StudentModel student) throws SQLException {
-        PreparedStatement statement = connection.prepareStatement("insert into niit-students(firstname,lastname,email,course,age)"+"values(?,?,?,?,?)");
+        PreparedStatement statement = connection.prepareStatement("insert into niit-students(firstname,lastname,email,course,age)values(?,?,?,?,?)");
 
         statement.setString(1, student.getFirstName());
         statement.setString(1, student.getLastName());
